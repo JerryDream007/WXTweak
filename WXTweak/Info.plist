@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>18E226</string>
+	<string>19C57</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>zh_CN</string>
 	<key>CFBundleDisplayName</key>
@@ -152,7 +152,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>$(MARKETING_VERSION)</string>
+	<string>7.0.11</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleSupportedPlatforms</key>
@@ -181,25 +181,25 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<string>7.0.11.33</string>
 	<key>DTAppStoreToolsBuild</key>
 	<string>11C29</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
-	<string>17B102</string>
+	<string>17A566</string>
 	<key>DTPlatformName</key>
 	<string>iphoneos</string>
 	<key>DTPlatformVersion</key>
-	<string>13.2</string>
+	<string>13.0</string>
 	<key>DTSDKBuild</key>
-	<string>17B102</string>
+	<string>17A566</string>
 	<key>DTSDKName</key>
-	<string>iphoneos13.2</string>
+	<string>iphoneos13.0</string>
 	<key>DTXcode</key>
-	<string>1130</string>
+	<string>1100</string>
 	<key>DTXcodeBuild</key>
-	<string>11C29</string>
+	<string>11A420a</string>
 	<key>FacebookAppID</key>
 	<string>290293790992170</string>
 	<key>FacebookAutoInitEnabled</key>
@@ -270,7 +270,7 @@
 		<true/>
 	</dict>
 	<key>MinimumOSVersion</key>
-	<string>13.0</string>
+	<string>10.0</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
@@ -364,22 +364,22 @@
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 	<key>WeChatBundleVersion</key>
-	<string>7.0.12.33</string>
+	<string>7.0.11.33</string>
 	<key>WeChatFeatureIdentifier</key>
-	<string>release_appstore_7.0.12</string>
+	<string>release_appstore_7.0.11</string>
 	<key>build_time</key>
-	<string>2020-03-19 22:14:45</string>
+	<string>2020-02-19 01:25:27</string>
 	<key>by</key>
 	<string>wx_ios_code_helper</string>
 	<key>path</key>
-	<string>release_appstore_7.0.12_2020_3_17_18_43_18</string>
+	<string>7.0.10_patch_ultron</string>
 	<key>rev</key>
-	<string>a328832be688788fb640b9d24fe34be2fbfd4177</string>
+	<string>f071a69bdddae576acfada260baaba6076355368</string>
 	<key>tag</key>
-	<string>release_appstore_7.0.12 #43</string>
+	<string>release_appstore_7.0.11 #24</string>
 	<key>uuid</key>
-	<string>7195b97e9078311991108bda959283f0</string>
+	<string>5636798d414f3903997bc13b4f1e06d0</string>
 	<key>ver</key>
-	<string>0x17000c21</string>
+	<string>0x17000b21</string>
 </dict>
 </plist>

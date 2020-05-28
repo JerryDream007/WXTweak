@@ -456,7 +456,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/opt/MonkeyDev/Tools/pack.sh codesign\n";
+			shellScript = "/opt/MonkeyDev/Tools/pack.sh codesign";
 		};
 		6F1B25B82478022000663B7B /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
