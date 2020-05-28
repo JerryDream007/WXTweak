@@ -1,0 +1,832 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6F1B25B42478022000663B7B /* MDConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6F1B25B32478022000663B7B /* MDConfig.plist */; };
+		6F1B25BE2478022000663B7B /* libWXTweakDylib.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6F1B25BD2478022000663B7B /* libWXTweakDylib.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		6F1B25C32478022000663B7B /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F1B25C22478022000663B7B /* JavaScriptCore.framework */; };
+		6F1B25C52478022000663B7B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F1B25C42478022000663B7B /* Foundation.framework */; };
+		6F1B25C72478022000663B7B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F1B25C62478022000663B7B /* UIKit.framework */; };
+		6F1B25CF2478022000663B7B /* MDConfigManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F1B25CE2478022000663B7B /* MDConfigManager.h */; };
+		6F1B25D12478022000663B7B /* MDConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1B25D02478022000663B7B /* MDConfigManager.m */; };
+		6F1B25D32478022000663B7B /* MDCycriptManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F1B25D22478022000663B7B /* MDCycriptManager.h */; };
+		6F1B25D52478022000663B7B /* MDCycriptManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1B25D42478022000663B7B /* MDCycriptManager.m */; };
+		6F1B25D72478022000663B7B /* MDMethodTrace.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F1B25D62478022000663B7B /* MDMethodTrace.h */; };
+		6F1B25D92478022000663B7B /* MDMethodTrace.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1B25D82478022000663B7B /* MDMethodTrace.m */; };
+		6F1B25DC2478022000663B7B /* a1a2-selectortramps-arm.s in Sources */ = {isa = PBXBuildFile; fileRef = 6F1B25DB2478022000663B7B /* a1a2-selectortramps-arm.s */; };
+		6F1B25DE2478022000663B7B /* a1a2-selectortramps-arm64.s in Sources */ = {isa = PBXBuildFile; fileRef = 6F1B25DD2478022000663B7B /* a1a2-selectortramps-arm64.s */; };
+		6F1B25E02478022000663B7B /* a1a2-selectortramps-i386.s in Sources */ = {isa = PBXBuildFile; fileRef = 6F1B25DF2478022000663B7B /* a1a2-selectortramps-i386.s */; };
+		6F1B25E22478022000663B7B /* a1a2-selectortramps-x86_64.s in Sources */ = {isa = PBXBuildFile; fileRef = 6F1B25E12478022000663B7B /* a1a2-selectortramps-x86_64.s */; };
+		6F1B25E42478022000663B7B /* a2a3-selectortramps-arm.s in Sources */ = {isa = PBXBuildFile; fileRef = 6F1B25E32478022000663B7B /* a2a3-selectortramps-arm.s */; };
+		6F1B25E62478022000663B7B /* a2a3-selectortramps-i386.s in Sources */ = {isa = PBXBuildFile; fileRef = 6F1B25E52478022000663B7B /* a2a3-selectortramps-i386.s */; };
+		6F1B25E82478022000663B7B /* a2a3-selectortramps-x86_64.s in Sources */ = {isa = PBXBuildFile; fileRef = 6F1B25E72478022000663B7B /* a2a3-selectortramps-x86_64.s */; };
+		6F1B25EA2478022000663B7B /* OCMethodTrace.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F1B25E92478022000663B7B /* OCMethodTrace.h */; };
+		6F1B25EC2478022000663B7B /* OCMethodTrace.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1B25EB2478022000663B7B /* OCMethodTrace.m */; };
+		6F1B25EE2478022000663B7B /* OCSelectorTrampolines.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F1B25ED2478022000663B7B /* OCSelectorTrampolines.h */; };
+		6F1B25F02478022000663B7B /* OCSelectorTrampolines.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6F1B25EF2478022000663B7B /* OCSelectorTrampolines.mm */; };
+		6F1B25F42478022000663B7B /* LLDBTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F1B25F32478022000663B7B /* LLDBTools.h */; };
+		6F1B25F62478022000663B7B /* LLDBTools.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6F1B25F52478022000663B7B /* LLDBTools.mm */; };
+		6F1B25FB2478022000663B7B /* AntiAntiDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1B25FA2478022000663B7B /* AntiAntiDebug.m */; };
+		6F1B25FE2478022000663B7B /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = 6F1B25FD2478022000663B7B /* fishhook.c */; };
+		6F1B26002478022000663B7B /* fishhook.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F1B25FF2478022000663B7B /* fishhook.h */; };
+		6F1B26022478022000663B7B /* WXTweakDylib.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F1B26012478022000663B7B /* WXTweakDylib.h */; };
+		6F1B26042478022000663B7B /* WXTweakDylib.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1B26032478022000663B7B /* WXTweakDylib.m */; };
+		6F1B260F247802B300663B7B /* NSMutableDictionary+Safe.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F1B260D247802B300663B7B /* NSMutableDictionary+Safe.h */; };
+		6F1B2610247802B300663B7B /* NSMutableDictionary+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1B260E247802B300663B7B /* NSMutableDictionary+Safe.m */; };
+		6F1B26162478040300663B7B /* UITweakDylib.xm in Headers */ = {isa = PBXBuildFile; fileRef = 6F1B26142478040300663B7B /* UITweakDylib.xm */; };
+		6F51B05324791751004F3CF9 /* skull.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F51B05224791751004F3CF9 /* skull.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6F1B25BF2478022000663B7B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6F1B25A12478022000663B7B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6F1B25BC2478022000663B7B;
+			remoteInfo = WXTweakDylib;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6F1B25A92478022000663B7B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6F1B25BE2478022000663B7B /* libWXTweakDylib.dylib in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6F1B25AC2478022000663B7B /* WXTweak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WXTweak.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F1B25AF2478022000663B7B /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		6F1B25B12478022000663B7B /* quick-resign.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "quick-resign.sh"; sourceTree = "<group>"; };
+		6F1B25B32478022000663B7B /* MDConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = MDConfig.plist; sourceTree = "<group>"; };
+		6F1B25B62478022000663B7B /* put ipa or app here */ = {isa = PBXFileReference; lastKnownFileType = text; path = "put ipa or app here"; sourceTree = "<group>"; };
+		6F1B25B72478022000663B7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6F1B25BD2478022000663B7B /* libWXTweakDylib.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libWXTweakDylib.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F1B25C22478022000663B7B /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		6F1B25C42478022000663B7B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6F1B25C62478022000663B7B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6F1B25CA2478022000663B7B /* WXTweakDylib.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = WXTweakDylib.xm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		6F1B25CB2478022000663B7B /* WXTweakDylib.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = WXTweakDylib.mm; sourceTree = "<group>"; };
+		6F1B25CE2478022000663B7B /* MDConfigManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDConfigManager.h; sourceTree = "<group>"; };
+		6F1B25D02478022000663B7B /* MDConfigManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDConfigManager.m; sourceTree = "<group>"; };
+		6F1B25D22478022000663B7B /* MDCycriptManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDCycriptManager.h; sourceTree = "<group>"; };
+		6F1B25D42478022000663B7B /* MDCycriptManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDCycriptManager.m; sourceTree = "<group>"; };
+		6F1B25D62478022000663B7B /* MDMethodTrace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDMethodTrace.h; sourceTree = "<group>"; };
+		6F1B25D82478022000663B7B /* MDMethodTrace.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDMethodTrace.m; sourceTree = "<group>"; };
+		6F1B25DB2478022000663B7B /* a1a2-selectortramps-arm.s */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; path = "a1a2-selectortramps-arm.s"; sourceTree = "<group>"; };
+		6F1B25DD2478022000663B7B /* a1a2-selectortramps-arm64.s */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; path = "a1a2-selectortramps-arm64.s"; sourceTree = "<group>"; };
+		6F1B25DF2478022000663B7B /* a1a2-selectortramps-i386.s */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; path = "a1a2-selectortramps-i386.s"; sourceTree = "<group>"; };
+		6F1B25E12478022000663B7B /* a1a2-selectortramps-x86_64.s */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; path = "a1a2-selectortramps-x86_64.s"; sourceTree = "<group>"; };
+		6F1B25E32478022000663B7B /* a2a3-selectortramps-arm.s */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; path = "a2a3-selectortramps-arm.s"; sourceTree = "<group>"; };
+		6F1B25E52478022000663B7B /* a2a3-selectortramps-i386.s */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; path = "a2a3-selectortramps-i386.s"; sourceTree = "<group>"; };
+		6F1B25E72478022000663B7B /* a2a3-selectortramps-x86_64.s */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.asm; path = "a2a3-selectortramps-x86_64.s"; sourceTree = "<group>"; };
+		6F1B25E92478022000663B7B /* OCMethodTrace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCMethodTrace.h; sourceTree = "<group>"; };
+		6F1B25EB2478022000663B7B /* OCMethodTrace.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCMethodTrace.m; sourceTree = "<group>"; };
+		6F1B25ED2478022000663B7B /* OCSelectorTrampolines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCSelectorTrampolines.h; sourceTree = "<group>"; };
+		6F1B25EF2478022000663B7B /* OCSelectorTrampolines.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = OCSelectorTrampolines.mm; sourceTree = "<group>"; };
+		6F1B25F12478022000663B7B /* selectortramps.mac */ = {isa = PBXFileReference; lastKnownFileType = text; path = selectortramps.mac; sourceTree = "<group>"; };
+		6F1B25F32478022000663B7B /* LLDBTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLDBTools.h; sourceTree = "<group>"; };
+		6F1B25F52478022000663B7B /* LLDBTools.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LLDBTools.mm; sourceTree = "<group>"; };
+		6F1B25F82478022000663B7B /* WXTweakDylib-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "WXTweakDylib-Prefix.pch"; path = "../WXTweakDylib-Prefix.pch"; sourceTree = "<group>"; };
+		6F1B25FA2478022000663B7B /* AntiAntiDebug.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AntiAntiDebug.m; sourceTree = "<group>"; };
+		6F1B25FD2478022000663B7B /* fishhook.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fishhook.c; sourceTree = "<group>"; };
+		6F1B25FF2478022000663B7B /* fishhook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fishhook.h; sourceTree = "<group>"; };
+		6F1B26012478022000663B7B /* WXTweakDylib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXTweakDylib.h; sourceTree = "<group>"; };
+		6F1B26032478022000663B7B /* WXTweakDylib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXTweakDylib.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		6F1B260D247802B300663B7B /* NSMutableDictionary+Safe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+Safe.h"; sourceTree = "<group>"; };
+		6F1B260E247802B300663B7B /* NSMutableDictionary+Safe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+Safe.m"; sourceTree = "<group>"; };
+		6F1B26142478040300663B7B /* UITweakDylib.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = UITweakDylib.xm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		6F1B26152478040300663B7B /* UITweakDylib.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = UITweakDylib.mm; sourceTree = "<group>"; };
+		6F51B05224791751004F3CF9 /* skull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skull.png; sourceTree = "<group>"; };
+		6F51B05424791AC3004F3CF9 /* WXMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXMacro.h; sourceTree = "<group>"; };
+		6FA4F03A247D39EF0045B154 /* WXRedEnvelop.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXRedEnvelop.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6F1B25A62478022000663B7B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F1B25BA2478022000663B7B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F1B25C32478022000663B7B /* JavaScriptCore.framework in Frameworks */,
+				6F1B25C72478022000663B7B /* UIKit.framework in Frameworks */,
+				6F1B25C52478022000663B7B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6F1B25A02478022000663B7B = {
+			isa = PBXGroup;
+			children = (
+				6F1B25AE2478022000663B7B /* WXTweak */,
+				6F1B25C82478022000663B7B /* WXTweakDylib */,
+				6F1B25C12478022000663B7B /* Frameworks */,
+				6F1B25AD2478022000663B7B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6F1B25AD2478022000663B7B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6F1B25AC2478022000663B7B /* WXTweak.app */,
+				6F1B25BD2478022000663B7B /* libWXTweakDylib.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6F1B25AE2478022000663B7B /* WXTweak */ = {
+			isa = PBXGroup;
+			children = (
+				6F51B05224791751004F3CF9 /* skull.png */,
+				6F1B25AF2478022000663B7B /* icon.png */,
+				6F1B25B72478022000663B7B /* Info.plist */,
+				6F1B25B02478022000663B7B /* Scripts */,
+				6F1B25B22478022000663B7B /* Config */,
+				6F1B25B52478022000663B7B /* TargetApp */,
+			);
+			path = WXTweak;
+			sourceTree = "<group>";
+		};
+		6F1B25B02478022000663B7B /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				6F1B25B12478022000663B7B /* quick-resign.sh */,
+			);
+			path = Scripts;
+			sourceTree = "<group>";
+		};
+		6F1B25B22478022000663B7B /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				6F1B25B32478022000663B7B /* MDConfig.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		6F1B25B52478022000663B7B /* TargetApp */ = {
+			isa = PBXGroup;
+			children = (
+				6F1B25B62478022000663B7B /* put ipa or app here */,
+			);
+			path = TargetApp;
+			sourceTree = "<group>";
+		};
+		6F1B25C12478022000663B7B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6F1B25C22478022000663B7B /* JavaScriptCore.framework */,
+				6F1B25C42478022000663B7B /* Foundation.framework */,
+				6F1B25C62478022000663B7B /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6F1B25C82478022000663B7B /* WXTweakDylib */ = {
+			isa = PBXGroup;
+			children = (
+				6FA4F03C247D48D20045B154 /* WXCommon */,
+				6F1B25C92478022000663B7B /* Logos语法(方法一) */,
+				6FA4F039247CF4EC0045B154 /* CaptainHook语法(方法二) */,
+				6F1B25CD2478022000663B7B /* Config */,
+				6F1B25DA2478022000663B7B /* Trace */,
+				6F1B25F22478022000663B7B /* Tools */,
+				6F1B25F92478022000663B7B /* AntiAntiDebug */,
+				6F1B25FC2478022000663B7B /* fishhook */,
+				6F1B25F72478022000663B7B /* Supporting Files */,
+			);
+			path = WXTweakDylib;
+			sourceTree = "<group>";
+		};
+		6F1B25C92478022000663B7B /* Logos语法(方法一) */ = {
+			isa = PBXGroup;
+			children = (
+				6F1B25CA2478022000663B7B /* WXTweakDylib.xm */,
+				6F1B25CB2478022000663B7B /* WXTweakDylib.mm */,
+				6F1B26142478040300663B7B /* UITweakDylib.xm */,
+				6F1B26152478040300663B7B /* UITweakDylib.mm */,
+			);
+			path = "Logos语法(方法一)";
+			sourceTree = "<group>";
+		};
+		6F1B25CD2478022000663B7B /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				6F1B25CE2478022000663B7B /* MDConfigManager.h */,
+				6F1B25D02478022000663B7B /* MDConfigManager.m */,
+				6F1B25D22478022000663B7B /* MDCycriptManager.h */,
+				6F1B25D42478022000663B7B /* MDCycriptManager.m */,
+				6F1B25D62478022000663B7B /* MDMethodTrace.h */,
+				6F1B25D82478022000663B7B /* MDMethodTrace.m */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		6F1B25DA2478022000663B7B /* Trace */ = {
+			isa = PBXGroup;
+			children = (
+				6F1B25DB2478022000663B7B /* a1a2-selectortramps-arm.s */,
+				6F1B25DD2478022000663B7B /* a1a2-selectortramps-arm64.s */,
+				6F1B25DF2478022000663B7B /* a1a2-selectortramps-i386.s */,
+				6F1B25E12478022000663B7B /* a1a2-selectortramps-x86_64.s */,
+				6F1B25E32478022000663B7B /* a2a3-selectortramps-arm.s */,
+				6F1B25E52478022000663B7B /* a2a3-selectortramps-i386.s */,
+				6F1B25E72478022000663B7B /* a2a3-selectortramps-x86_64.s */,
+				6F1B25E92478022000663B7B /* OCMethodTrace.h */,
+				6F1B25EB2478022000663B7B /* OCMethodTrace.m */,
+				6F1B25ED2478022000663B7B /* OCSelectorTrampolines.h */,
+				6F1B25EF2478022000663B7B /* OCSelectorTrampolines.mm */,
+				6F1B25F12478022000663B7B /* selectortramps.mac */,
+			);
+			path = Trace;
+			sourceTree = "<group>";
+		};
+		6F1B25F22478022000663B7B /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				6F1B25F32478022000663B7B /* LLDBTools.h */,
+				6F1B25F52478022000663B7B /* LLDBTools.mm */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		6F1B25F72478022000663B7B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6F1B25F82478022000663B7B /* WXTweakDylib-Prefix.pch */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6F1B25F92478022000663B7B /* AntiAntiDebug */ = {
+			isa = PBXGroup;
+			children = (
+				6F1B25FA2478022000663B7B /* AntiAntiDebug.m */,
+			);
+			path = AntiAntiDebug;
+			sourceTree = "<group>";
+		};
+		6F1B25FC2478022000663B7B /* fishhook */ = {
+			isa = PBXGroup;
+			children = (
+				6F1B25FD2478022000663B7B /* fishhook.c */,
+				6F1B25FF2478022000663B7B /* fishhook.h */,
+			);
+			path = fishhook;
+			sourceTree = "<group>";
+		};
+		6FA4F039247CF4EC0045B154 /* CaptainHook语法(方法二) */ = {
+			isa = PBXGroup;
+			children = (
+				6F1B26012478022000663B7B /* WXTweakDylib.h */,
+				6F1B26032478022000663B7B /* WXTweakDylib.m */,
+			);
+			path = "CaptainHook语法(方法二)";
+			sourceTree = "<group>";
+		};
+		6FA4F03C247D48D20045B154 /* WXCommon */ = {
+			isa = PBXGroup;
+			children = (
+				6F1B260D247802B300663B7B /* NSMutableDictionary+Safe.h */,
+				6F1B260E247802B300663B7B /* NSMutableDictionary+Safe.m */,
+				6F51B05424791AC3004F3CF9 /* WXMacro.h */,
+				6FA4F03A247D39EF0045B154 /* WXRedEnvelop.h */,
+			);
+			path = WXCommon;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		6F1B25BB2478022000663B7B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F1B25D32478022000663B7B /* MDCycriptManager.h in Headers */,
+				6F1B25D72478022000663B7B /* MDMethodTrace.h in Headers */,
+				6F1B26162478040300663B7B /* UITweakDylib.xm in Headers */,
+				6F1B260F247802B300663B7B /* NSMutableDictionary+Safe.h in Headers */,
+				6F1B26002478022000663B7B /* fishhook.h in Headers */,
+				6F1B26022478022000663B7B /* WXTweakDylib.h in Headers */,
+				6F1B25F42478022000663B7B /* LLDBTools.h in Headers */,
+				6F1B25CF2478022000663B7B /* MDConfigManager.h in Headers */,
+				6F1B25EE2478022000663B7B /* OCSelectorTrampolines.h in Headers */,
+				6F1B25EA2478022000663B7B /* OCMethodTrace.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		6F1B25AB2478022000663B7B /* WXTweak */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6F1B260A2478022000663B7B /* Build configuration list for PBXNativeTarget "WXTweak" */;
+			buildPhases = (
+				6F1B25A52478022000663B7B /* Sources */,
+				6F1B25A62478022000663B7B /* Frameworks */,
+				6F1B25A72478022000663B7B /* ShellScript */,
+				6F1B25A82478022000663B7B /* Resources */,
+				6F1B25A92478022000663B7B /* CopyFiles */,
+				6F1B25AA2478022000663B7B /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6F1B25C02478022000663B7B /* PBXTargetDependency */,
+			);
+			name = WXTweak;
+			productName = WXTweak;
+			productReference = 6F1B25AC2478022000663B7B /* WXTweak.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6F1B25BC2478022000663B7B /* WXTweakDylib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6F1B26072478022000663B7B /* Build configuration list for PBXNativeTarget "WXTweakDylib" */;
+			buildPhases = (
+				6F1B25B82478022000663B7B /* ShellScript */,
+				6F1B25B92478022000663B7B /* Sources */,
+				6F1B25BA2478022000663B7B /* Frameworks */,
+				6F1B25BB2478022000663B7B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WXTweakDylib;
+			productName = WXTweakDylib;
+			productReference = 6F1B25BD2478022000663B7B /* libWXTweakDylib.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6F1B25A12478022000663B7B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = "宋澎";
+				TargetAttributes = {
+					6F1B25AB2478022000663B7B = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					6F1B25BC2478022000663B7B = {
+						CreatedOnToolsVersion = 11.0;
+					};
+				};
+			};
+			buildConfigurationList = 6F1B25A42478022000663B7B /* Build configuration list for PBXProject "WXTweak" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6F1B25A02478022000663B7B;
+			productRefGroup = 6F1B25AD2478022000663B7B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6F1B25AB2478022000663B7B /* WXTweak */,
+				6F1B25BC2478022000663B7B /* WXTweakDylib */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6F1B25A82478022000663B7B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F1B25B42478022000663B7B /* MDConfig.plist in Resources */,
+				6F51B05324791751004F3CF9 /* skull.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6F1B25A72478022000663B7B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/MonkeyDev/Tools/pack.sh\n";
+		};
+		6F1B25AA2478022000663B7B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/MonkeyDev/Tools/pack.sh codesign\n";
+		};
+		6F1B25B82478022000663B7B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/MonkeyDev/bin/md --xcbp-logos";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6F1B25A52478022000663B7B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F1B25B92478022000663B7B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F1B2610247802B300663B7B /* NSMutableDictionary+Safe.m in Sources */,
+				6F1B25D52478022000663B7B /* MDCycriptManager.m in Sources */,
+				6F1B25DE2478022000663B7B /* a1a2-selectortramps-arm64.s in Sources */,
+				6F1B25DC2478022000663B7B /* a1a2-selectortramps-arm.s in Sources */,
+				6F1B25E22478022000663B7B /* a1a2-selectortramps-x86_64.s in Sources */,
+				6F1B26042478022000663B7B /* WXTweakDylib.m in Sources */,
+				6F1B25EC2478022000663B7B /* OCMethodTrace.m in Sources */,
+				6F1B25D12478022000663B7B /* MDConfigManager.m in Sources */,
+				6F1B25FE2478022000663B7B /* fishhook.c in Sources */,
+				6F1B25FB2478022000663B7B /* AntiAntiDebug.m in Sources */,
+				6F1B25F02478022000663B7B /* OCSelectorTrampolines.mm in Sources */,
+				6F1B25E02478022000663B7B /* a1a2-selectortramps-i386.s in Sources */,
+				6F1B25E62478022000663B7B /* a2a3-selectortramps-i386.s in Sources */,
+				6F1B25E42478022000663B7B /* a2a3-selectortramps-arm.s in Sources */,
+				6F1B25F62478022000663B7B /* LLDBTools.mm in Sources */,
+				6F1B25E82478022000663B7B /* a2a3-selectortramps-x86_64.s in Sources */,
+				6F1B25D92478022000663B7B /* MDMethodTrace.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6F1B25C02478022000663B7B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6F1B25BC2478022000663B7B /* WXTweakDylib */;
+			targetProxy = 6F1B25BF2478022000663B7B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		6F1B26052478022000663B7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6F1B26062478022000663B7B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6F1B26082478022000663B7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5ZMRWZHDC9;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_BITCODE = NO;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/Frameworks/**",
+					"$(MonkeyDevPath)/Librarys/**",
+					"$(MonkeyDevTheosPath)/vendor/lib",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WXTweakDylib/WXTweakDylib-Prefix.pch";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/include",
+					"$(MonkeyDevTheosPath)/vendor/include/**",
+				);
+				INSTALL_PATH = "@executable_path/Frameworks/libWXTweakDylib.dylib";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/Frameworks",
+					"$(MonkeyDevTheosPath)/vendor/lib/**",
+				);
+				MonkeyDevPath = /opt/MonkeyDev;
+				MonkeyDevTheosPath = /opt/theos;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-DTHEOS_INSTANCE_NAME=\"\\\"WXTweakDylib\\\"\"",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-weak_library",
+					"/usr/lib/libc++.dylib",
+					"-weak_library",
+					"/usr/lib/libstdc++.dylib",
+					"-weak_library",
+					"$(MonkeyDevPath)/Frameworks/libsubstrate.dylib",
+					"-lcycript",
+					"-framework",
+					RevealServer,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = NO;
+			};
+			name = Debug;
+		};
+		6F1B26092478022000663B7B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = YES;
+				DEVELOPMENT_TEAM = 5ZMRWZHDC9;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_BITCODE = NO;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/Frameworks/**",
+					"$(MonkeyDevPath)/Librarys/**",
+					"$(MonkeyDevTheosPath)/vendor/lib",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WXTweakDylib/WXTweakDylib-Prefix.pch";
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/include",
+					"$(MonkeyDevTheosPath)/vendor/include/**",
+				);
+				INSTALL_PATH = "@executable_path/Frameworks/libWXTweakDylib.dylib";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/Frameworks",
+					"$(MonkeyDevTheosPath)/vendor/lib/**",
+				);
+				MonkeyDevPath = /opt/MonkeyDev;
+				MonkeyDevTheosPath = /opt/theos;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-DTHEOS_INSTANCE_NAME=\"\\\"WXTweakDylib\\\"\"",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-weak_library",
+					"/usr/lib/libc++.dylib",
+					"-weak_library",
+					"/usr/lib/libstdc++.dylib",
+					"-weak_library",
+					"$(MonkeyDevPath)/Frameworks/libsubstrate.dylib",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6F1B260B2478022000663B7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 7.0.12.33;
+				DEVELOPMENT_TEAM = 5ZMRWZHDC9;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = WXTweak/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MARKETING_VERSION = 7.0.12;
+				MONKEYDEV_ADD_SUBSTRATE = YES;
+				MONKEYDEV_CLASS_DUMP = NO;
+				MONKEYDEV_DEFAULT_BUNDLEID = YES;
+				MONKEYDEV_INSERT_DYLIB = YES;
+				MONKEYDEV_RESTORE_SYMBOL = NO;
+				MONKEYDEV_TARGET_APP = Optional;
+				PODS_CONFIGURATION_BUILD_DIR = "$BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				PODS_ROOT = "${SRCROOT}/Pods";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.xin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6F1B260C2478022000663B7B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 7.0.12.33;
+				DEVELOPMENT_TEAM = 5ZMRWZHDC9;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = WXTweak/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MARKETING_VERSION = 7.0.12;
+				MONKEYDEV_ADD_SUBSTRATE = YES;
+				MONKEYDEV_CLASS_DUMP = NO;
+				MONKEYDEV_DEFAULT_BUNDLEID = YES;
+				MONKEYDEV_INSERT_DYLIB = YES;
+				MONKEYDEV_RESTORE_SYMBOL = NO;
+				MONKEYDEV_TARGET_APP = Optional;
+				PODS_CONFIGURATION_BUILD_DIR = "$BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				PODS_ROOT = "${SRCROOT}/Pods";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tencent.xin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6F1B25A42478022000663B7B /* Build configuration list for PBXProject "WXTweak" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F1B26052478022000663B7B /* Debug */,
+				6F1B26062478022000663B7B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6F1B26072478022000663B7B /* Build configuration list for PBXNativeTarget "WXTweakDylib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F1B26082478022000663B7B /* Debug */,
+				6F1B26092478022000663B7B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6F1B260A2478022000663B7B /* Build configuration list for PBXNativeTarget "WXTweak" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F1B260B2478022000663B7B /* Debug */,
+				6F1B260C2478022000663B7B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6F1B25A12478022000663B7B /* Project object */;
+}
