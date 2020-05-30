@@ -4,7 +4,10 @@
 
 ### 整个逆向流程，都放到简书上了，[点击查看](https://www.jianshu.com/p/977b4452446b)
 
-### 功能：自动抢红包、消息防撤回 
+### 效果图：
+
+![image.png](https://upload-images.jianshu.io/upload_images/1674389-790a42839553b322.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 ### 使用方法
 
