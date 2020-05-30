@@ -326,6 +326,7 @@
 		<string>fetch</string>
 		<string>location</string>
 		<string>network-authentication</string>
+		<string>processing</string>
 		<string>remote-notification</string>
 		<string>voip</string>
 	</array>

@@ -55,7 +55,7 @@ CHConstructor{
     }];
 }
 
-#pragma mark - Hook接受消息方法
+#pragma mark - 自动抢红包 - Hook接受消息方法
 
 //-(void)AsyncOnAddMsg:(id)arg1 MsgWrap:(id)arg2
 CHDeclareClass(CMessageMgr)
@@ -133,7 +133,7 @@ CHOptimizedMethod2(self, void, CMessageMgr, AsyncOnAddMsg, NSString *, msg, MsgW
     }
 }
 
-#pragma mark - Hook红包通用响应
+#pragma mark - 自动抢红包 - Hook红包通用响应
 
 //- (void)OnWCToHongbaoCommonResponse:(HongBaoRes *)hongBaoRes Request:(HongBaoReq *)hongBaoReq{
 CHDeclareClass(WCRedEnvelopesLogicMgr)
