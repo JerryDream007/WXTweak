@@ -24,8 +24,8 @@ xcuserdata/
 .DS_Store
 .svn/
 
-WXTweak/TargetApp/脱壳的微信.ipa
-WXTweak/TargetApp/TestMonkey.app
+WXTweak/TargetApp/微信.ipa
+WXTweak/TargetApp/WeChat.app
 
 ## Obj-C/Swift specific
 *.hmap
