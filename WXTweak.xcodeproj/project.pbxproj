@@ -39,7 +39,7 @@
 		6F1B260F247802B300663B7B /* NSMutableDictionary+Safe.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F1B260D247802B300663B7B /* NSMutableDictionary+Safe.h */; };
 		6F1B2610247802B300663B7B /* NSMutableDictionary+Safe.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1B260E247802B300663B7B /* NSMutableDictionary+Safe.m */; };
 		6F1B26162478040300663B7B /* UITweakDylib.xm in Headers */ = {isa = PBXBuildFile; fileRef = 6F1B26142478040300663B7B /* UITweakDylib.xm */; };
-		6F51B05324791751004F3CF9 /* skull.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F51B05224791751004F3CF9 /* skull.png */; };
+		6FD352A824820B3D00FF7A47 /* skull@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6FD352A724820B3D00FF7A47 /* skull@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,10 +108,10 @@
 		6F1B260E247802B300663B7B /* NSMutableDictionary+Safe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+Safe.m"; sourceTree = "<group>"; };
 		6F1B26142478040300663B7B /* UITweakDylib.xm */ = {isa = PBXFileReference; lastKnownFileType = text; path = UITweakDylib.xm; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		6F1B26152478040300663B7B /* UITweakDylib.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = UITweakDylib.mm; sourceTree = "<group>"; };
-		6F51B05224791751004F3CF9 /* skull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skull.png; sourceTree = "<group>"; };
 		6F51B05424791AC3004F3CF9 /* WXMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXMacro.h; sourceTree = "<group>"; };
 		6FA4F03A247D39EF0045B154 /* WXRedEnvelop.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXRedEnvelop.h; sourceTree = "<group>"; };
 		6FA4F0AB248129D40045B154 /* WeChat_Headers */ = {isa = PBXFileReference; lastKnownFileType = text; path = WeChat_Headers; sourceTree = SOURCE_ROOT; };
+		6FD352A724820B3D00FF7A47 /* skull@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "skull@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,8 +158,8 @@
 			isa = PBXGroup;
 			children = (
 				6FA4F0AB248129D40045B154 /* WeChat_Headers */,
-				6F51B05224791751004F3CF9 /* skull.png */,
 				6F1B25AF2478022000663B7B /* icon.png */,
+				6FD352A724820B3D00FF7A47 /* skull@3x.png */,
 				6F1B25B72478022000663B7B /* Info.plist */,
 				6F1B25B02478022000663B7B /* Scripts */,
 				6F1B25B22478022000663B7B /* Config */,
@@ -419,7 +419,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F1B25B42478022000663B7B /* MDConfig.plist in Resources */,
-				6F51B05324791751004F3CF9 /* skull.png in Resources */,
+				6FD352A824820B3D00FF7A47 /* skull@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

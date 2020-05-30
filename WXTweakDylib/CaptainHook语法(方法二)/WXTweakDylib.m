@@ -257,8 +257,7 @@ CHOptimizedMethod2(self, UITableViewCell *, FindFriendEntryViewController, table
         UITableViewCell *cell = CHSuper2(FindFriendEntryViewController, tableView, tableView, cellForRowAtIndexPath, indexPath);
         return cell;
     }
-
-    NSString *cellID = ([indexPath row] == 0) ? @"sp_autoCellID" : @"sp_exitWXID";
+    NSString *cellID = @"sp_cellID";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     if (cell == nil){
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
