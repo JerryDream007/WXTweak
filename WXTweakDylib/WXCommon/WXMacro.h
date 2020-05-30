@@ -7,4 +7,5 @@
 //
 
 #define SP_Defaults [NSUserDefaults standardUserDefaults]
-#define SP_AutoKey @"sp_auto_key"
+#define SP_AutoOpenRedKey @"SP_AutoOpenRedKey"
+#define SP_StopRevokeMsgKey @"SP_StopRevokeMsgKey"

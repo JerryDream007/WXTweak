@@ -20,7 +20,7 @@
 //
 //    CMessageWrap * wrap1 = wrap;
 //    NSInteger uiMessageType = [wrap1 m_uiMessageType];
-//    BOOL isAutoRed = [SP_Defaults boolForKey:SP_AutoKey];
+//    BOOL isAutoRed = [SP_Defaults boolForKey:SP_AutoOpenRedKey];
 //    if (uiMessageType == 49 && isAutoRed){
 //        //收到红包消息
 //        NSString *nsFromUsr = [wrap m_nsFromUsr];

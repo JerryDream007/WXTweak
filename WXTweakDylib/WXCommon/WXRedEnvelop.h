@@ -17,21 +17,48 @@
 @property(copy, nonatomic) NSString *m_c2cNativeUrl;
 @end
 
-@interface CMessageWrap
-@property(retain, nonatomic) WCPayInfoItem *m_oWCPayInfoItem;
-@property(nonatomic) unsigned int m_uiMessageType; // @synthesize m_uiMessageType;
-@property(retain, nonatomic) NSString *m_nsMsgSource; // @synthesize m_nsMsgSource;
-@property(retain, nonatomic) NSString *m_nsBizChatId; // @synthesize m_nsBizChatId;
-@property(retain, nonatomic) NSString *m_nsBizClientMsgID; // @synthesize m_nsBizClientMsgID;
-@property(retain, nonatomic) NSString *m_nsContent; // @synthesize m_nsContent;
-@property(retain, nonatomic) NSString *m_nsToUsr; // @synthesize m_nsToUsr;
-@property(retain, nonatomic) NSString *m_nsFromUsr; // @synthesize m_nsFromUsr;
-@property(retain, nonatomic) NSString *m_nsAtUserList; // @synthesize m_nsAtUserList;
-@property(retain, nonatomic) NSString *m_nsKFWorkerOpenID; // @synthesize m_nsKFWorkerOpenID;
-@property(retain, nonatomic) NSString *m_nsDisplayName; // @synthesize m_nsDisplayName;
-@property(retain, nonatomic) NSString *m_nsPattern; // @synthesize m_nsPattern;
-@property(retain, nonatomic) NSString *m_nsRealChatUsr; // @synthesize m_nsRealChatUsr;
-@property(retain, nonatomic) NSString *m_nsPushContent; // @synthesize m_nsPushContent;
+@interface CMessageMgr : NSObject
+
+- (void)DelMsg:(id)arg1 MsgList:(id)arg2 DelAll:(_Bool)arg3;
+- (void)AddMsg:(id)arg1 MsgWrap:(id)arg2;
+- (void)onRevokeMsg:(id)arg1;
+- (id)GetMsgByCreateTime:(id)arg1 FromID:(unsigned int)arg2 FromCreateTime:(unsigned int)arg3 Limit:(unsigned int)arg4 LeftCount:(unsigned int *)arg5 FromSequence:(unsigned int)arg6;
+- (void)AddLocalMsg:(id)arg1 MsgWrap:(id)arg2 fixTime:(_Bool)arg3 NewMsgArriveNotify:(_Bool)arg4;
+- (void)AsyncOnAddMsg:(id)arg1 MsgWrap:(id)arg2;
+
+@end
+
+@interface CMessageWrap : NSObject
+
+@property (retain, nonatomic) WCPayInfoItem *m_oWCPayInfoItem;
+@property (assign, nonatomic) NSUInteger m_uiMesLocalID;
+@property (retain, nonatomic) NSString* m_nsFromUsr;            ///< 发信人，可能是群或个人
+@property (retain, nonatomic) NSString* m_nsToUsr;              ///< 收信人
+@property (assign, nonatomic) NSUInteger m_uiStatus;
+@property (retain, nonatomic) NSString* m_nsContent;            ///< 消息内容
+@property (retain, nonatomic) NSString* m_nsRealChatUsr;        ///< 群消息的发信人，具体是群里的哪个人
+@property (assign, nonatomic) NSUInteger m_uiMessageType;
+@property (assign, nonatomic) long long m_n64MesSvrID;
+@property (assign, nonatomic) NSUInteger m_uiCreateTime;
+@property (retain, nonatomic) NSString *m_nsDesc;
+@property (retain, nonatomic) NSString *m_nsAppExtInfo;
+@property (assign, nonatomic) NSUInteger m_uiAppDataSize;
+@property (assign, nonatomic) NSUInteger m_uiAppMsgInnerType;
+@property (retain, nonatomic) NSString *m_nsShareOpenUrl;
+@property (retain, nonatomic) NSString *m_nsShareOriginUrl;
+@property (retain, nonatomic) NSString *m_nsJsAppId;
+@property (retain, nonatomic) NSString *m_nsPrePublishId;
+@property (retain, nonatomic) NSString *m_nsAppID;
+@property (retain, nonatomic) NSString *m_nsAppName;
+@property (retain, nonatomic) NSString *m_nsThumbUrl;
+@property (retain, nonatomic) NSString *m_nsAppMediaUrl;
+@property (retain, nonatomic) NSData *m_dtThumbnail;
+@property (retain, nonatomic) NSString *m_nsTitle;
+@property (retain, nonatomic) NSString *m_nsMsgSource;
+
+- (id)initWithMsgType:(long long)arg1;
++ (_Bool)isSenderFromMsgWrap:(id)arg1;
+
 @end
 
 @interface CContactMgr

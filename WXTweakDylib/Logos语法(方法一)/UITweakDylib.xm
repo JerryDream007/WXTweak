@@ -45,7 +45,7 @@
 //        //抢红包
 //        cell.textLabel.text = @"自动抢红包";
 //        UISwitch *switchView = [[UISwitch alloc] init];
-//        switchView.on = [SP_Defaults boolForKey:SP_AutoKey];
+//        switchView.on = [SP_Defaults boolForKey:SP_AutoOpenRedKey];
 //        cell.accessoryView = switchView;
 //        [switchView addTarget:self action:@selector(sp_autoRed:) forControlEvents:UIControlEventValueChanged];
 //
@@ -82,7 +82,7 @@
 //
 //%new
 //- (void)sp_autoRed:(UISwitch *)switchView{
-//    [SP_Defaults setBool:switchView.on forKey:SP_AutoKey];
+//    [SP_Defaults setBool:switchView.on forKey:SP_AutoOpenRedKey];
 //    [SP_Defaults synchronize];
 //}
 //

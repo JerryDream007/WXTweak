@@ -38,7 +38,7 @@ CHConstructor{
         }
         
         
-//        [[MDMethodTrace sharedInstance] addClassTrace:@"BaseMsgContentViewController"];
+//        [[MDMethodTrace sharedInstance] addClassTrace:@"CMessageMgr"];
         
 //        OCMethodTrace* methodTrace = [OCMethodTrace sharedInstance];
 //        Class msgClass = NSClassFromString(@"BaseMsgContentViewController");
@@ -63,7 +63,7 @@ CHOptimizedMethod2(self, void, CMessageMgr, AsyncOnAddMsg, NSString *, msg, MsgW
     CHSuper2(CMessageMgr, AsyncOnAddMsg, msg, MsgWrap, wrap);
     NSLog(@"CMessageMgr-hook-成功");
     NSInteger uiMessageType = [wrap m_uiMessageType];
-    BOOL isAutoRed = [SP_Defaults boolForKey:SP_AutoKey];
+    BOOL isAutoRed = [SP_Defaults boolForKey:SP_AutoOpenRedKey];
     if (uiMessageType == 49 && isAutoRed){
         //收到红包消息
         NSString *nsFromUsr = [wrap m_nsFromUsr];
@@ -132,10 +132,6 @@ CHOptimizedMethod2(self, void, CMessageMgr, AsyncOnAddMsg, NSString *, msg, MsgW
         [redEnvelopesLogicMgr ReceiverQueryRedEnvelopesRequest:mutableDict];
     }
 }
-CHConstructor{
-    CHLoadLateClass(CMessageMgr);
-    CHClassHook2(CMessageMgr,AsyncOnAddMsg,MsgWrap);
-}
 
 #pragma mark - Hook红包通用响应
 
@@ -177,12 +173,73 @@ CHOptimizedMethod2(self, void, WCRedEnvelopesLogicMgr, OnWCToHongbaoCommonRespon
         }
     }
 }
-CHConstructor{
-    CHLoadLateClass(WCRedEnvelopesLogicMgr);
-    CHClassHook2(WCRedEnvelopesLogicMgr,OnWCToHongbaoCommonResponse,Request);
+
+#pragma mark - 消息防撤回 - BaseMsgContentLogicController
+
+CHDeclareClass(BaseMsgContentLogicController)
+
+CHOptimizedMethod2(self, void, BaseMsgContentLogicController, OnDelMsg, id, arg1, MsgWrap, id, arg2){
+    BOOL isAutoStop = [SP_Defaults boolForKey:SP_StopRevokeMsgKey];
+    if (!isAutoStop) {
+        CHSuper2(BaseMsgContentLogicController, OnDelMsg,arg1,MsgWrap,arg2);
+    }else{
+        
+    }
+}
+
+#pragma mark - 消息防撤回 - CMessageMgr
+
+CHOptimizedMethod1(self, void, CMessageMgr, onRevokeMsg, CMessageWrap *, arg1)
+{
+    BOOL isAutoStop = [SP_Defaults boolForKey:SP_StopRevokeMsgKey];
+    if (!isAutoStop) {
+        CHSuper1(CMessageMgr, onRevokeMsg, arg1);
+    } else {
+        if ([arg1.m_nsContent rangeOfString:@"<session>"].location == NSNotFound) { return; }
+        if ([arg1.m_nsContent rangeOfString:@"<replacemsg>"].location == NSNotFound) { return; }
+
+        NSString *(^parseSession)() = ^NSString *() {
+            NSUInteger startIndex = [arg1.m_nsContent rangeOfString:@"<session>"].location + @"<session>".length;
+            NSUInteger endIndex = [arg1.m_nsContent rangeOfString:@"</session>"].location;
+            NSRange range = NSMakeRange(startIndex, endIndex - startIndex);
+            return [arg1.m_nsContent substringWithRange:range];
+        };
+
+        NSString *(^parseSenderName)() = ^NSString *() {
+            NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"<!\\[CDATA\\[(.*?)撤回了一条消息\\]\\]>" options:NSRegularExpressionCaseInsensitive error:nil];
+
+            NSRange range = NSMakeRange(0, arg1.m_nsContent.length);
+            NSTextCheckingResult *result = [regex matchesInString:arg1.m_nsContent options:0 range:range].firstObject;
+            if (result.numberOfRanges < 2) { return nil; }
+
+            return [arg1.m_nsContent substringWithRange:[result rangeAtIndex:1]];
+        };
+
+        CMessageWrap *msgWrap = [[objc_getClass("CMessageWrap") alloc] initWithMsgType:0x2710];
+        BOOL isSender = [objc_getClass("CMessageWrap") isSenderFromMsgWrap:arg1];
+
+        NSString *sendContent;
+        if (isSender) {
+            [msgWrap setM_nsFromUsr:arg1.m_nsToUsr];
+            [msgWrap setM_nsToUsr:arg1.m_nsFromUsr];
+            sendContent = @"你撤回一条消息";
+        } else {
+            [msgWrap setM_nsToUsr:arg1.m_nsToUsr];
+            [msgWrap setM_nsFromUsr:arg1.m_nsFromUsr];
+
+            NSString *name = parseSenderName();
+            sendContent = [NSString stringWithFormat:@"拦截 %@ 的一条撤回消息", name ? name : arg1.m_nsFromUsr];
+        }
+        [msgWrap setM_uiStatus:0x4];
+        [msgWrap setM_nsContent:sendContent];
+        [msgWrap setM_uiCreateTime:[arg1 m_uiCreateTime]];
+
+        [self AddLocalMsg:parseSession() MsgWrap:msgWrap fixTime:0x1 NewMsgArriveNotify:0x0];
+    }
 }
 
 #pragma mark - Hook微信的发现界面UI
+
 CHDeclareClass(FindFriendEntryViewController)
 
 //- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -212,11 +269,18 @@ CHOptimizedMethod2(self, UITableViewCell *, FindFriendEntryViewController, table
         //抢红包
         cell.textLabel.text = @"自动抢红包";
         UISwitch *switchView = [[UISwitch alloc] init];
-        switchView.on = [SP_Defaults boolForKey:SP_AutoKey];
+        switchView.on = [SP_Defaults boolForKey:SP_AutoOpenRedKey];
         cell.accessoryView = switchView;
-        [switchView addTarget:self action:@selector(sp_autoRed:) forControlEvents:UIControlEventValueChanged];
+        [switchView addTarget:self action:@selector(sp_autoOpenRed:) forControlEvents:UIControlEventValueChanged];
 
     }else if ([indexPath row] == 1){
+        //消息防撤回
+        cell.textLabel.text = @"消息防撤回";
+        UISwitch *switchView = [[UISwitch alloc] init];
+        switchView.on = [SP_Defaults boolForKey:SP_StopRevokeMsgKey];
+        cell.accessoryView = switchView;
+        [switchView addTarget:self action:@selector(sp_autoStopRevoke:) forControlEvents:UIControlEventValueChanged];
+    }else if ([indexPath row] == 2){
         //退出微信
         cell.textLabel.text = @"退出微信";
     }
@@ -227,7 +291,7 @@ CHOptimizedMethod2(self, UITableViewCell *, FindFriendEntryViewController, table
 CHOptimizedMethod2(self, NSInteger, FindFriendEntryViewController, tableView, UITableView *, tableView, numberOfRowsInSection, NSInteger, section){
     NSInteger totalSection = [self numberOfSectionsInTableView: tableView];
     if (section == totalSection - 1){
-        return 2;
+        return 3;
     }else{
         return CHSuper2(FindFriendEntryViewController, tableView, tableView, numberOfRowsInSection, section);
     }
@@ -252,14 +316,20 @@ CHOptimizedMethod2(self, void, FindFriendEntryViewController, tableView, UITable
     if ([indexPath row] == 0){
         //自动抢红包
     }else if ([indexPath row] == 1){
+        //防撤回
+    }else if ([indexPath row] == 2){
         // 终止进程
         exit(0);
         // abort();
     }
 }
 
-CHDeclareMethod1(void, FindFriendEntryViewController, sp_autoRed, UISwitch *, switchView){
-    [SP_Defaults setBool:switchView.on forKey:SP_AutoKey];
+CHDeclareMethod1(void, FindFriendEntryViewController, sp_autoOpenRed, UISwitch *, switchView){
+    [SP_Defaults setBool:switchView.on forKey:SP_AutoOpenRedKey];
+    [SP_Defaults synchronize];
+}
+CHDeclareMethod1(void, FindFriendEntryViewController, sp_autoStopRevoke, UISwitch *, switchView){
+    [SP_Defaults setBool:switchView.on forKey:SP_StopRevokeMsgKey];
     [SP_Defaults synchronize];
 }
 
@@ -270,4 +340,20 @@ CHConstructor{
     CHClassHook2(FindFriendEntryViewController, tableView, numberOfRowsInSection);
     CHClassHook2(FindFriendEntryViewController, tableView, heightForRowAtIndexPath);
     CHClassHook2(FindFriendEntryViewController, tableView, didSelectRowAtIndexPath);
+}
+
+CHConstructor{
+    CHLoadLateClass(CMessageMgr);
+    CHClassHook2(CMessageMgr,AsyncOnAddMsg,MsgWrap);
+    CHClassHook1(CMessageMgr,onRevokeMsg);
+}
+
+CHConstructor{
+    CHLoadLateClass(WCRedEnvelopesLogicMgr);
+    CHClassHook2(WCRedEnvelopesLogicMgr,OnWCToHongbaoCommonResponse,Request);
+}
+
+CHConstructor{
+    CHLoadLateClass(BaseMsgContentLogicController);
+    CHClassHook2(BaseMsgContentLogicController,OnDelMsg,MsgWrap);
 }

@@ -152,7 +152,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>7.0.11</string>
+	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleSupportedPlatforms</key>
@@ -181,7 +181,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>7.0.11.33</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>DTAppStoreToolsBuild</key>
 	<string>11C29</string>
 	<key>DTCompiler</key>
@@ -322,12 +322,12 @@
 	</array>
 	<key>UIBackgroundModes</key>
 	<array>
-		<string>location</string>
 		<string>audio</string>
 		<string>fetch</string>
-		<string>voip</string>
-		<string>remote-notification</string>
+		<string>location</string>
 		<string>network-authentication</string>
+		<string>remote-notification</string>
+		<string>voip</string>
 	</array>
 	<key>UIDeviceFamily</key>
 	<array>

@@ -111,6 +111,7 @@
 		6F51B05224791751004F3CF9 /* skull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skull.png; sourceTree = "<group>"; };
 		6F51B05424791AC3004F3CF9 /* WXMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXMacro.h; sourceTree = "<group>"; };
 		6FA4F03A247D39EF0045B154 /* WXRedEnvelop.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXRedEnvelop.h; sourceTree = "<group>"; };
+		6FA4F0AB248129D40045B154 /* WeChat_Headers */ = {isa = PBXFileReference; lastKnownFileType = text; path = WeChat_Headers; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +157,7 @@
 		6F1B25AE2478022000663B7B /* WXTweak */ = {
 			isa = PBXGroup;
 			children = (
+				6FA4F0AB248129D40045B154 /* WeChat_Headers */,
 				6F51B05224791751004F3CF9 /* skull.png */,
 				6F1B25AF2478022000663B7B /* icon.png */,
 				6F1B25B72478022000663B7B /* Info.plist */,
@@ -751,12 +753,14 @@
 		6F1B260B2478022000663B7B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 7.0.12.33;
 				DEVELOPMENT_TEAM = 5ZMRWZHDC9;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = WXTweak/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MACH_O_TYPE = mh_execute;
 				MARKETING_VERSION = 7.0.12;
 				MONKEYDEV_ADD_SUBSTRATE = YES;
 				MONKEYDEV_CLASS_DUMP = NO;
@@ -775,12 +779,14 @@
 		6F1B260C2478022000663B7B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 7.0.12.33;
 				DEVELOPMENT_TEAM = 5ZMRWZHDC9;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = WXTweak/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MACH_O_TYPE = mh_execute;
 				MARKETING_VERSION = 7.0.12;
 				MONKEYDEV_ADD_SUBSTRATE = YES;
 				MONKEYDEV_CLASS_DUMP = NO;
